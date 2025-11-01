@@ -1,0 +1,30 @@
+package br.edu.atitus.ARTUR_MACHADO_IBANEZ.zoo_digital.animais;
+
+import br.edu.atitus.ARTUR_MACHADO_IBANEZ.zoo_digital.comportamentos.Nadador;
+import br.edu.atitus.ARTUR_MACHADO_IBANEZ.zoo_digital.comportamentos.Predador;
+
+public class Arraia extends Peixe implements Nadador, Predador {
+    public Arraia(String nome, int idade) {
+        super(nome, idade, "salgada");
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println(getNome() + " está nadando em silêncio");
+    }
+
+    @Override
+    public void nadar() {
+        System.out.println(getNome() + " está nadando perto da faixa de areia");
+    }
+
+    @Override
+    public void cacar() {
+        System.out.println(getNome() + " está procurando pequenos peixes");
+    }
+
+    @Override
+    public void comer() {
+        System.out.println(getNome() + " está se alimentando de pequenos peixes");
+    }
+}
